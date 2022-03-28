@@ -1,0 +1,18 @@
+:host{
+    .content {
+        border-radius: 100%;
+        padding: 0.313rem;
+        width: 3rem;
+        height: 3rem;
+        color: white;
+    }
+
+    .content:hover {
+        background: rgba(96, 125, 139, 0.04);
+        color:  #607D8B;
+        border: 1px solid;
+    }
+    .active {
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #9dc1fb, 0 1px 2px 0 black;
+    }
+}

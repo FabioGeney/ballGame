@@ -1,0 +1,46 @@
+<div class="flex flex-column justify-content-center align-items-center">
+    <div *ngIf="!userBet;else game_over">
+        <div  class="grid" >
+            <div class="col-12">
+                <h3>Numbers</h3>
+            </div>  
+            <div class="flex col-12">
+                <div class="grid">
+                    <app-ball *ngFor="let ball of ballList" (click)="ballSelected = ball" [selected]="ballSelected?.id === ball.id" [ball]="ball"></app-ball>
+                </div>
+            </div>
+        
+        </div>
+        <div class="grid">
+            <div class="col-12 flex justify-content-center">
+                <p class="text-selection" (click)="ballSelected = undefined!">Clear selection</p>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #game_over>
+        <div class="grid">
+            <div class="col-12 flex justify-content-center">
+                <h3>Result</h3>
+            </div>
+            <div class="col-12 flex justify-content-center">
+                <app-ball [ball]="userBet?.ball!"></app-ball>
+            </div>
+            <div class="col-12 flex justify-content-center">
+                <p *ngIf="userBet?.isWinner; else lose_message" class="text-success">YOU WON</p>
+                <ng-template #lose_message >
+                    <p class="text-error">YOU LOST</p>
+                    
+                </ng-template>
+                <br>
+            </div>
+            <div class="col-12 flex justify-content-center">
+            -{{ userBet?.amount | currency}}
+            </div>
+        </div>
+    </ng-template>
+
+
+
+</div>
+

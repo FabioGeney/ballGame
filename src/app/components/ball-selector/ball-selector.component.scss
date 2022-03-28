@@ -1,0 +1,22 @@
+:host {
+    display: grid;
+    overflow-y: auto;
+    height: 70vh;
+    app-ball {
+        cursor: pointer;
+        margin: 0.1rem 0.3rem;
+    }
+    .text-selection{
+        cursor: pointer;
+        color: #2196F3;
+    }
+
+    .text-success {
+        color: rgb(2, 201, 2);
+        font-weight: 600;
+    }
+    .text-error {
+        color: #fd4b4b;
+        font-weight: 600;
+    }
+}

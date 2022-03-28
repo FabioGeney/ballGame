@@ -1,0 +1,26 @@
+:host {
+    display: grid;
+    height: 50vh;
+    app-card{
+        display: grid;
+        overflow-y: auto;
+        height: 30vh;
+    }
+    span {
+        display: block;
+        text-align: center;
+    }
+    .w-full{
+        width: 100%;
+    }
+    .p-0 {
+        padding: 0 !important;
+    }
+    .bg {
+        background-color: #dbdada;
+        border: solid 1px #ced4da;
+    }
+    .mt{
+        margin-top: 7px;
+    }
+}

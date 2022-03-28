@@ -1,0 +1,10 @@
+<div class="grid">
+  <div class="col-12 md:col-8">
+    <app-card>
+      <app-ball-selector #ballSelector></app-ball-selector>
+    </app-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <app-bet-slip [ballSelected]="ballSelector.ballSelected"></app-bet-slip>
+  </div>
+</div>
